@@ -33,10 +33,10 @@
         <h2>
 <a id="openlibm" class="anchor" href="#openlibm" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpenLibm</h2>
 
-<p>OpenLibm is an effort to have a high quality, portable, standalone
+<p><a href="http://www.openlibm.org">OpenLibm</a> is an effort to have a high quality, portable, standalone
 C mathematical library (<a href="http://en.wikipedia.org/wiki/libm"><code>libm</code></a>).
 It can be used standalone in applications and programming language
-implementations. </p>
+implementations.</p>
 
 <p>The project was born out of a need to have a good <code>libm</code> for the
 <a href="http://www.julialang.org">Julia programming langage</a> that worked
@@ -47,8 +47,9 @@ consistently across compilers and operating systems, and in 32-bit and
 <a id="history" class="anchor" href="#history" aria-hidden="true"><span class="octicon octicon-link"></span></a>History</h3>
 
 <p>The OpenLibm code derives from the <a href="http://svnweb.freebsd.org/base/head/lib/msun/">FreeBSD
-msun</a> implementation,
-which in turn derives from <a href="http://www.netlib.org/fdlibm/">FDLIBM
+msun</a> and <a href="http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/lib/libm/src/">OpenBSD
+libm</a>
+implementations, which in turn derives from <a href="http://www.netlib.org/fdlibm/">FDLIBM
 5.3</a>. As a result, it includes a number
 of fixes and updates to FDLIBM that have accumulated over the years in
 <code>msun</code>, and optimized versions of many functions.</p>
@@ -69,8 +70,7 @@ source tree, but no attempt has been made to build any of these.</p>
 <ol>
 <li>
 <code>make</code> or <code>make USEGCC=1</code> to build with GCC. This is the default on
-Linux and Windows.<br>
-</li>
+Linux and Windows.</li>
 <li>
 <code>make USECLANG=1</code> to build with clang. This is the default on OS X.</li>
 </ol>
@@ -80,6 +80,16 @@ Linux and Windows.<br>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-28835595-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
