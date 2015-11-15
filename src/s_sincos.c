@@ -25,7 +25,7 @@
  *      Borrow liberally from s_sin.c and s_cos.c, merging
  *  efforts where applicable and returning their values in
  * appropriate variables, thereby slightly reducing the
- * amount of work relative to just calling sin/cos(x) 
+ * amount of work relative to just calling sin/cos(x)
  * separately
  *
  * Special cases:
@@ -37,9 +37,9 @@
 #include <float.h>
 #include <openlibm_math.h>
 
-//#define INLINE_REM_PIO2
+#define INLINE_REM_PIO2
 #include "math_private.h"
-//#include "e_rem_pio2.c"
+#include "e_rem_pio2.c"
 
 /* Constants used in polynomial approximation of sin/cos */
 static const double

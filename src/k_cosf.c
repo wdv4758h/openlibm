@@ -16,7 +16,6 @@
 
 #ifndef INLINE_KERNEL_COSDF
 #include "cdefs-compat.h"
-//__FBSDID("$FreeBSD: src/lib/msun/src/k_cosf.c,v 1.18 2009/06/03 08:16:34 ed Exp $");
 #endif
 
 #include <openlibm_math.h>
@@ -34,8 +33,8 @@ C3  =  0x199342e0ee5069.0p-68;	/*  0.0000243904487962774090654 */
 #ifndef INLINE_KERNEL_COSDF
 extern
 #endif
-//__inline float
-DLLEXPORT float
+inline float
+//DLLEXPORT float
 __kernel_cosdf(double x)
 {
 	double r, w, z;

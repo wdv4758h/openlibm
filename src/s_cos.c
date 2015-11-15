@@ -11,7 +11,6 @@
  */
 
 #include "cdefs-compat.h"
-//__FBSDID("$FreeBSD: src/lib/msun/src/s_cos.c,v 1.13 2011/02/10 07:37:50 das Exp $");
 
 /* cos(x)
  * Return cosine function of x.
@@ -47,9 +46,9 @@
 #include <float.h>
 #include <openlibm_math.h>
 
-//#define INLINE_REM_PIO2
+#define INLINE_REM_PIO2
 #include "math_private.h"
-//#include "e_rem_pio2.c"
+#include "e_rem_pio2.c"
 
 DLLEXPORT double
 cos(double x)

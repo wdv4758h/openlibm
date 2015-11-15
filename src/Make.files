@@ -27,10 +27,11 @@ $(CUR_SRCS) = common.c \
 	s_nexttowardf.c s_remquo.c s_remquof.c \
 	s_rint.c s_rintf.c s_round.c s_roundf.c s_roundl.c \
 	s_scalbln.c s_scalbn.c s_scalbnf.c s_signbit.c \
-	s_signgam.c s_sin.c s_sincos.c \
-	s_sinf.c s_sincosf.c s_tan.c s_tanf.c s_tanh.c s_tanhf.c s_tgammaf.c \
+	s_signgam.c s_sin.c \
+	s_sinf.c s_tan.c s_tanf.c s_tanh.c s_tanhf.c s_tgammaf.c \
 	s_trunc.c s_truncf.c s_cpow.c  s_cpowf.c \
 	w_cabs.c w_cabsf.c
+#        s_sincos.c s_sincosf.c \
 
 ifneq ($(OS), WINNT)
 $(CUR_SRCS) += s_nan.c
@@ -48,12 +49,15 @@ $(CUR_SRCS) +=	e_acosl.c e_asinl.c e_atan2l.c e_fmodl.c \
 	s_csqrtl.c s_floorl.c s_fmal.c \
 	s_frexpl.c s_logbl.c s_nexttoward.c \
 	s_remquol.c s_cpowl.c s_cargl.c \
-	s_sinl.c s_sincosl.c s_tanl.c s_truncl.c w_cabsl.c \
+	s_sinl.c \
+        s_tanl.c s_truncl.c w_cabsl.c \
 	s_nextafterl.c s_rintl.c s_scalbnl.c polevll.c \
 	s_casinl.c s_ctanl.c \
 	s_cimagl.c s_conjl.c s_creall.c s_cacoshl.c s_catanhl.c s_casinhl.c \
 	s_catanl.c s_csinl.c s_cacosl.c s_cexpl.c s_csinhl.c s_ccoshl.c \
 	s_clogl.c s_ctanhl.c s_ccosl.c s_cbrtl.c
+#        s_sincosl.c
+
 endif
 
 # C99 complex functions

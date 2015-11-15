@@ -14,13 +14,13 @@
 #include <float.h>
 #include <openlibm_math.h>
 
-//#define	INLINE_KERNEL_COSDF
-//#define	INLINE_KERNEL_SINDF
-//#define INLINE_REM_PIO2F
+#define	INLINE_KERNEL_COSDF
+#define	INLINE_KERNEL_SINDF
+#define INLINE_REM_PIO2F
 #include "math_private.h"
-//#include "e_rem_pio2f.c"
-//#include "k_cosf.c"
-//#include "k_sinf.c"
+#include "e_rem_pio2f.c"
+#include "k_cosf.c"
+#include "k_sinf.c"
 
 
 /* Constants used in shortcircuits in sincosf */
@@ -115,14 +115,14 @@ sincosf(float x, float * s, float * c) {
 	/* |x| ~<= 9*pi/4 */
 	if(ix<=0x40e231d5) {
 		/* |x|  ~> 7*pi/4 */
-	    if(ix<=0x40afeddf) {	
+	    if(ix<=0x40afeddf) {
 			if(hx>0) {
 				__kernel_sincosdf( x - sc3pio2, c, &k_s );
 				*s = -k_s;
 			} else {
 				__kernel_sincosdf( x + sc3pio2, &k_c, s );
 				*c = -k_c;
-		    } 
+		    }
 		}
 		else {
 	    	if( hx > 0 ) {
@@ -148,7 +148,7 @@ sincosf(float x, float * s, float * c) {
 			case 1:
 				__kernel_sincosdf( -y, c, s );
 				break;
-			case 2: 
+			case 2:
 				__kernel_sincosdf( -y, s, &k_c);
 				*c = -k_c;
 				break;
