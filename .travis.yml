@@ -2,12 +2,29 @@ language: c
 script: ./.travis.sh
 os:
     - linux
+compiler:
+    - clang
+    - gcc
 env:
     - TARGET=host
     - TARGET=arm32
+    - TARGET=host CFLAGS="-O0"
+    - TARGET=arm32 CFLAGS="-O0"
 matrix:
     exclude:
         - os: osx
           env: TARGET=arm32
+        - compiler: clang
+          env: TARGET=arm32
+        - compiler: clang
+          env: TARGET=arm32 CFLAGS="-O0"
+addons:
+  apt:
+    sources:
+        - ubuntu-toolchain-r-test
+    packages:
+        - gcc-4.7-arm-linux-gnueabihf
+        - qemu
+        - binfmt-support
 notifications:
     email: false
