@@ -1,6 +1,9 @@
 OPENLIBM_HOME=$(abspath ..)
 include ../Make.inc
 
+# disable compiler builtin to make sure testing code invoke openlibm's implementation
+CFLAGS+=-fno-builtin
+
 # Set rpath of tests to builddir for loading shared library
 OPENLIBM_LIB = -L.. -lopenlibm
 ifeq ($(OS),Linux)
